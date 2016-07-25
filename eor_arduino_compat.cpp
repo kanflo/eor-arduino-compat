@@ -8,6 +8,10 @@ extern "C" uint8_t pgm_read_byte(uint8_t *address)
 	return 0;
 }
 
+extern "C" {
+	#include <stdio.h>
+}
+
 Print::Print()
 {
 
@@ -15,4 +19,18 @@ Print::Print()
 
 void Print::print(char *s)
 {
+	do {
+		write(*s++);
+	} while(*s);
+}
+
+void Print::println(char *s)
+{
+	print(s);
+	write('\n');
+}
+
+void Print::write(uint8_t c)
+{
+	printf("ERROR: Should not end up in Print::write\n");
 }
