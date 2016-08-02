@@ -20,17 +20,17 @@ Print::Print()
 void Print::print(char *s)
 {
 	do {
-		write(*s++);
+		writec(*s++);
 	} while(*s);
 }
 
 void Print::println(char *s)
 {
 	print(s);
-	write('\n');
+	writec('\n');
 }
 
-void Print::write(uint8_t c)
+void Print::writec(uint8_t c)
 {
 	printf("ERROR: Should not end up in Print::write\n");
 }

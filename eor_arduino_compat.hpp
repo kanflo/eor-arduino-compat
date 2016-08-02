@@ -37,7 +37,7 @@ class Print {
 		Print();
 		void print(char *s);
 		void println(char *s);
-		virtual void write(uint8_t c);
+		virtual void writec(uint8_t c);
 };
 
 #endif // __EOR_ARDUINO_COMPAT_H__
