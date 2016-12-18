@@ -28,7 +28,7 @@
 #define INPUT GPIO_INPUT
 #define pinMode(pin, mode) gpio_enable(pin, mode)
 
-#define delay(ms) vTaskDelay(ms / portTICK_RATE_MS)
+#define delay(ms) vTaskDelay(ms / portTICK_PERIOD_MS)
 
 extern "C" uint8_t pgm_read_byte(uint8_t *address);
 
